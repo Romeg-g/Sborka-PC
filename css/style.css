@@ -1,5 +1,3 @@
-
-
 *, *::after, *::before {
     box-sizing: border-box;
 }
@@ -40,6 +38,17 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
 }
 
+:root {
+    --text-size-medium: 1.6rem;
+}
+
+.block__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
     border-radius: 5rem;
     padding: 1rem 3rem;
@@ -72,7 +81,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .header__nav a {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 150%;
 }
 
@@ -88,7 +97,7 @@ h1, h2, h3, h4, h5 {
 
 .header__button {
     background: linear-gradient(142deg, #c89afc 0%, #7c6afa 100%);
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 150%;
 }
 
@@ -106,7 +115,7 @@ h1, h2, h3, h4, h5 {
 .main-display .container {
     position: relative;
     z-index: 10;
-    /* padding-bottom: 22.8rem; */
+    padding-bottom: 22.8rem;
 }
 
 .main-display__header {
@@ -123,7 +132,7 @@ h1, h2, h3, h4, h5 {
 
 .main-display__button {
     background: linear-gradient(141deg, #df5950 0%, #451046 100%);
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 150%;
 }
 
@@ -148,7 +157,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .timer__text {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 140%;
     opacity: 0.4;
 }
@@ -181,7 +190,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .work_description {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 160%;
 }
 
@@ -190,26 +199,32 @@ h1, h2, h3, h4, h5 {
     padding-bottom: 20rem;
 }
 
+.process .process__img {
+    transform: rotate(45deg);
+}
+
 .process__img {
     width: 9rem;
     height: 4.5rem;
+    margin-right: 2rem;
 }
 
 .process__header {
     font-weight: 700;
+    padding-top: 1rem;
     font-size: 4.8rem;
     line-height: 140%;
     margin-bottom: 4.9rem;
 }
 
-.process_title {
+.process__title {
     display: flex;
 }
 
 .process__description {
     max-width: 41.1rem;
     margin-bottom: 8rem;
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 160%;
     opacity: 0.5;
 }
@@ -245,4 +260,111 @@ h1, h2, h3, h4, h5 {
     font-size: 1.4rem;
     line-height: 160%;
     opacity: 0.5;
+}
+
+.command {
+    padding-bottom: 20rem;
+}
+
+.command__title {
+    margin-bottom: 11.9rem;
+}
+
+.command__header {
+    margin-bottom: 0;
+}
+
+.command__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 11rem;
+    padding-right: 11rem;
+}
+
+.command__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.command__img {
+    width: 19rem;
+    height: 19rem;
+    margin-bottom: 4rem;
+    border-radius: 50%;
+}
+
+.command__name {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 140%;
+}
+
+.command__professional {
+    margin-bottom: 3rem;
+    font-size: var(--text-size-medium);
+    line-height: 160%;
+}
+
+.command__link {
+    font-size: var(--text-size-medium);
+    line-height: 150%;
+    border: 0.1rem solid #FFFFFF;
+}
+
+.assembly {
+    padding-bottom: 24.4rem;
+}
+
+.assembly__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.assembly__header {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+}
+
+.assembly__description {
+    margin-bottom: 4.52rem;
+    font-size: var(--text-size-medium);
+    line-height: 160%;
+}
+
+.assembly__button {
+    margin-bottom: 5.08rem;
+    background: linear-gradient(141deg, #df5950 0%, #451046 100%);
+    font-weight: 700;
+    font-size: var(--text-size-medium);
+    line-height: 150%;
+}
+
+.accembly__socials {
+    display: flex;
+}
+
+.assembly_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(142deg, #c89afc 0%, #7c6afa 100%);
+    width: 5rem;
+    height: 5rem;
+}
+
+.assembly_item img {
+    width: 50%;
+    height: 50%;
+}
+
+.assembly_item:not(:last-child) {
+    margin-right: 3rem;
 }
