@@ -7,6 +7,7 @@ html, body {
     font-size: 62.5%;
     font-weight: normal;
     color: #ffffff;
+    scroll-behavior: smooth;
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(8, 6, 7, 1) 50%);
 }
 
@@ -71,11 +72,6 @@ h1, h2, h3, h4, h5 {
     justify-content: space-between;
 }
 
-/* .header__menu {
-    display: flex;
-    align-items: center;
-} */
-
 .header__nav a:not(:last-child) {
     margin-right: 7.1rem;
 }
@@ -83,6 +79,12 @@ h1, h2, h3, h4, h5 {
 .header__nav a {
     font-size: var(--text-size-medium);
     line-height: 150%;
+}
+
+.header__nav a:active {
+  color: #7c6afa;
+  font-weight: bold;
+  border-bottom: 2px solid #7c6afa;
 }
 
 .header__nav {
@@ -199,10 +201,6 @@ h1, h2, h3, h4, h5 {
     padding-bottom: 20rem;
 }
 
-.process .process__img {
-    transform: rotate(45deg);
-}
-
 .process__img {
     width: 9rem;
     height: 4.5rem;
@@ -231,6 +229,7 @@ h1, h2, h3, h4, h5 {
 
 .process__columns {
     display: flex;
+    position: relative;
 }
 
 .process__columns::after {
@@ -239,7 +238,7 @@ h1, h2, h3, h4, h5 {
     width: 130rem;
     height: 0.2rem;
     position: absolute;
-    top: 31rem;
+    top: 6rem;
     left: 50%;
     transform: translate(-50%, 0);
     background: linear-gradient(142deg, #c89afc 0%, #7c6afa 100%);
@@ -367,4 +366,83 @@ h1, h2, h3, h4, h5 {
 
 .assembly_item:not(:last-child) {
     margin-right: 3rem;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 10;
+    padding: 3rem 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.modal__inner {
+    position: relative;
+    width: 66.3rem;
+    padding: 9rem 1rem;
+    background: #2c2c2c;
+    text-align: center;
+}
+
+.modal__header {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+    margin-bottom: 1rem;
+}
+
+.modal__subheader {
+    margin-bottom: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 160%;
+    opacity: 0.5;
+}
+
+.modal__elements {
+    width: 45.4rem;
+    margin: 0 auto 3.2rem auto;
+}
+
+.modal__item {
+    height: 4.4rem;
+}
+
+.modal__input {
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    line-height: 160%;
+    color: #FFFFFF;
+    opacity: 0.8;
+    padding: 0 3rem;
+}
+
+.modal__input::placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.modal__item:not(:last-child) {
+    margin-bottom: 1.8rem;
+}
+
+.modal__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.noscroll {
+    overflow: hidden;
+    height: 100%;
 }
